@@ -7,28 +7,73 @@ Source: https://sketchfab.com/3d-models/apple-desktop-09e39508a9a34d4e8f9ffbbf71
 Title: Apple Desktop
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/desktop-transformed.glb')
+  const { nodes, materials } = useGLTF("/desktop-transformed.glb");
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <group position={[-0.01, 0.09, 1.46]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.48, 0.48, 0.43]}>
-          <mesh geometry={nodes.Plane_0.geometry} material={materials['Material.002']} />
-          <mesh geometry={nodes.Plane_1.geometry} material={materials['Material.000']} />
-          <mesh geometry={nodes.Plane004_0.geometry} material={materials['Lamp.001']} />
-          <mesh geometry={nodes.Plane003_0.geometry} material={materials['Lamp.001']} />
-          <mesh geometry={nodes.Plane002_0.geometry} material={materials.Material} position={[-0.03, 2.23, -0.38]} rotation={[Math.PI / 2, 0, 0]} scale={[1.08, 0.12, 0.92]} />
-          <mesh geometry={nodes.Plane001_0.geometry} material={materials.Material} position={[-0.03, 2.33, -0.38]} rotation={[Math.PI / 2, 0, 0]} scale={[1.08, 0.12, 0.92]} />
+        <group
+          position={[-0.01, 0.09, 1.46]}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={[0.48, 0.48, 0.43]}
+        >
+          <mesh
+            geometry={nodes.Plane_0.geometry}
+            material={materials["Material.002"]}
+          />
+          <mesh
+            geometry={nodes.Plane_1.geometry}
+            material={materials["Material.000"]}
+          />
+          <mesh
+            geometry={nodes.Plane004_0.geometry}
+            material={materials["Lamp.001"]}
+          />
+          <mesh
+            geometry={nodes.Plane003_0.geometry}
+            material={materials["Lamp.001"]}
+          />
+          <mesh
+            geometry={nodes.Plane002_0.geometry}
+            material={materials.Material}
+            position={[-0.03, 2.23, -0.38]}
+            rotation={[Math.PI / 2, 0, 0]}
+            scale={[1.08, 0.12, 0.92]}
+          />
+          <mesh
+            geometry={nodes.Plane001_0.geometry}
+            material={materials.Material}
+            position={[-0.03, 2.33, -0.38]}
+            rotation={[Math.PI / 2, 0, 0]}
+            scale={[1.08, 0.12, 0.92]}
+          />
         </group>
-        <mesh geometry={nodes.Cube_0.geometry} material={materials['Material.003']} position={[-0.01, 0.09, 1.46]} scale={0.43} />
-        <mesh geometry={nodes.Plane005_0.geometry} material={materials['Material.001']} position={[-0.01, 0.1, 1.46]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.48, 0.47, 0.42]} />
-        <mesh geometry={nodes.Keyboard_0.geometry} material={materials['Material.006']} position={[0, -1.31, 0.07]} rotation={[0.22, 0.02, 0.08]} scale={[1.1, 0.23, 0.01]} />
+        <mesh
+          geometry={nodes.Cube_0.geometry}
+          material={materials["Material.003"]}
+          position={[-0.01, 0.09, 1.46]}
+          scale={0.43}
+        />
+        <mesh
+          geometry={nodes.Plane005_0.geometry}
+          material={materials["Material.001"]}
+          position={[-0.01, 0.1, 1.46]}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={[0.48, 0.47, 0.42]}
+        />
+        <mesh
+          geometry={nodes.Keyboard_0.geometry}
+          material={materials["Material.006"]}
+          position={[0, -1.31, 0.07]}
+          rotation={[0.22, 0.02, 0.08]}
+          scale={[1.1, 0.23, 0.01]}
+        />
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/desktop-transformed.glb')
+useGLTF.preload("/desktop-transformed.glb");

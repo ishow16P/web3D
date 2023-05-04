@@ -14,8 +14,8 @@ export const Cube = () => {
         <RenderTexture attach="map">
           <PerspectiveCamera makeDefault position={[0, 0, 5]} />
           <color attach="background" args={["#dc9dcd"]} />
-          <Text ref={textRef} fontSize={3} color="#555">
-            Hello
+          <Text ref={textRef} fontSize={1} color="#555">
+            Wad Team
           </Text>
         </RenderTexture>
       </meshStandardMaterial>

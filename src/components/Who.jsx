@@ -69,7 +69,11 @@ export const Who = () => {
       <Container>
         <Left>
           <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
-            <OrbitControls enableZoom={false} autoRotate/>
+            <OrbitControls
+              enableZoom={true}
+              autoRotate={true}
+              autoRotateSpeed={10}
+            />
             <ambientLight intensity={1} />
             <directionalLight position={(3, 2, 1)} />
             <Cube />
